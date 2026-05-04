@@ -8,11 +8,11 @@ Command-line tool for FFmpeg-based video processing: trim, concatenate, fade, ap
 
 ## ✨ Features
 
-- ✂️ **Trim** a video segment with stream copy (no re-encoding)
-- 🔗 **Concatenate** two or more videos with stream copy
-- 🎬 **Fade** in and/or out on a lossless FFV1 master
-- 📼 **Apply a VHS effect** (visual noise, color bleed, and audio degradation)
-- 🔊 **Extract audio** to uncompressed WAV (PCM 16-bit)
+- 📼 **VHS effect** — retro visual noise, color bleed, and audio degradation
+- ✂️ **Trim** — cut a segment by start/end time with stream copy (no re-encoding)
+- 🔗 **Concatenate** — join two or more videos with stream copy
+- 🎬 **Fade** — fade-in and/or fade-out on an FFV1 master
+- 🔊 **Extract audio** — dump the audio track to uncompressed WAV (PCM 16-bit)
 - 🎞️ **Convert to FFV1** — create a lossless MKV master for editing
 - 📺 **Prepare for YouTube** — encode to ProRes 422 HQ MOV, upscaled to 4K
 
