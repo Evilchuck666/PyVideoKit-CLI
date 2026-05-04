@@ -1,4 +1,4 @@
-# PyVideoKit-CLI
+# 🎥 PyVideoKit-CLI
 
 ![Python](https://img.shields.io/badge/python-%3E%3D3.10-blue)
 
@@ -6,19 +6,19 @@ Command-line tool for FFmpeg-based video processing: trim, concatenate, fade, ap
 
 ---
 
-## Features
+## ✨ Features
 
-- **Trim** a video segment with stream copy (no re-encoding)
-- **Concatenate** two or more videos with stream copy
-- **Fade** in and/or out on a lossless FFV1 master
-- **Apply a VHS effect** (visual noise, color bleed, and audio degradation)
-- **Extract audio** to uncompressed WAV (PCM 16-bit)
-- **Convert to FFV1** — create a lossless MKV master for editing
-- **Prepare for YouTube** — encode to ProRes 422 HQ MOV, upscaled to 4K
+- ✂️ **Trim** a video segment with stream copy (no re-encoding)
+- 🔗 **Concatenate** two or more videos with stream copy
+- 🎬 **Fade** in and/or out on a lossless FFV1 master
+- 📼 **Apply a VHS effect** (visual noise, color bleed, and audio degradation)
+- 🔊 **Extract audio** to uncompressed WAV (PCM 16-bit)
+- 🎞️ **Convert to FFV1** — create a lossless MKV master for editing
+- 📺 **Prepare for YouTube** — encode to ProRes 422 HQ MOV, upscaled to 4K
 
 ---
 
-## Requirements
+## 📦 Requirements
 
 - **Python** ≥ 3.10
 - **FFmpeg** and **FFprobe** available in `PATH`
@@ -27,7 +27,7 @@ Command-line tool for FFmpeg-based video processing: trim, concatenate, fade, ap
 
 ---
 
-## Installation
+## 🔧 Installation
 
 ```bash
 pip install .
@@ -37,7 +37,7 @@ This installs the `pvk` command group and seven standalone scripts (`trim-video`
 
 ---
 
-## Usage
+## 🚀 Usage
 
 ```
 pvk [--version] COMMAND [ARGS]...
@@ -47,7 +47,7 @@ Each command is also available as a standalone script — `trim-video ...` is eq
 
 ---
 
-### `apply-vhs-effect`
+### 📼 `apply-vhs-effect`
 
 Apply a retro VHS visual and audio effect to a video.
 
@@ -62,7 +62,7 @@ pvk apply-vhs-effect INPUT [-o OUTPUT]
 
 ---
 
-### `concat-videos`
+### 🔗 `concat-videos`
 
 Concatenate two or more videos using stream copy (no re-encoding).
 
@@ -77,7 +77,7 @@ pvk concat-videos VIDEO VIDEO... [-o OUTPUT]
 
 ---
 
-### `convert-to-ffv1`
+### 🎞️ `convert-to-ffv1`
 
 Convert a video to lossless FFV1/MKV format. Use this to create an editing master before applying effects.
 
@@ -93,7 +93,7 @@ pvk convert-to-ffv1 INPUT [--fps FPS] [-o OUTPUT]
 
 ---
 
-### `extract-audio`
+### 🔊 `extract-audio`
 
 Extract the audio track to an uncompressed WAV file (PCM 16-bit).
 
@@ -108,7 +108,7 @@ pvk extract-audio INPUT [-o OUTPUT]
 
 ---
 
-### `fade-video`
+### 🎬 `fade-video`
 
 Add a fade-in and/or fade-out to an FFV1 video.
 
@@ -128,7 +128,7 @@ pvk fade-video INPUT [--fade SECS] [--fade-in SECS] [--fade-out SECS] [--fps FPS
 
 ---
 
-### `prepare-youtube`
+### 📺 `prepare-youtube`
 
 Encode an FFV1 master to ProRes 422 HQ MOV, upscaled to 4K, optimized for YouTube upload.
 
@@ -143,7 +143,7 @@ pvk prepare-youtube INPUT [-o OUTPUT]
 
 ---
 
-### `trim-video`
+### ✂️ `trim-video`
 
 Cut a segment from a video using stream copy (no re-encoding).
 
@@ -160,7 +160,7 @@ pvk trim-video INPUT --start TIME --end TIME [-o OUTPUT]
 
 ---
 
-## Typical Workflow
+## 🔄 Typical Workflow
 
 ```bash
 # 1. Create a lossless master from any source video
@@ -176,4 +176,4 @@ pvk fade-video trimmed.mkv --fade 1.0 -o faded.mkv
 pvk prepare-youtube faded.mkv -o final_upload.mov
 ```
 
-All operations display a real-time progress bar in the terminal.
+> All operations display a real-time progress bar in the terminal.
