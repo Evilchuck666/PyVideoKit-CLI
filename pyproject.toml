@@ -13,7 +13,7 @@ authors = [{name = "Evilchuck666", email = "carlos.martinez.medina1992@gmail.com
 dependencies = [
     "click>=8.0",
     "rich>=13.0",
-    "PyVideoKit-Libs @ file:///home/evilchuck/projects/PyVideoKit/PyVideoKit-Libs",
+    "PyVideoKit-Libs",
 ]
 
 [project.scripts]
