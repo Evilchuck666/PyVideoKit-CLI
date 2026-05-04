@@ -1,6 +1,7 @@
 # 🎥 PyVideoKit-CLI
 
 ![Python](https://img.shields.io/badge/python-%3E%3D3.10-blue)
+![License](https://img.shields.io/badge/license-GPLv3-green)
 
 Command-line tool for FFmpeg-based video processing: trim, concatenate, fade, apply a VHS effect, extract audio, archive to lossless FFV1, and export for YouTube — all from a single `pvk` command.
 
