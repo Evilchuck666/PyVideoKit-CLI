@@ -9,7 +9,7 @@ from ._helpers import handle_errors, track_progress
 
 @click.command("convert-to-ffv1")
 @click.argument("input", type=click.Path(exists=True))
-@click.option("--fps", default=60, show_default=True, help="Output frame rate.")
+@click.option("--fps", default=None, type=int, help="Output frame rate (default: preserve source fps).")
 @click.option("-o", "--output", default=None, help="Output file or directory.")
 def cmd(input, fps, output):
     """Convert video to lossless FFV1/MKV format."""

@@ -12,9 +12,8 @@ from ._helpers import handle_errors, track_progress
 @click.option("--fade", default=None, type=float, help="Fade-in and fade-out duration in seconds (shorthand).")
 @click.option("--fade-in", "fade_in", default=None, type=float, help="Fade-in duration in seconds.")
 @click.option("--fade-out", "fade_out", default=None, type=float, help="Fade-out duration in seconds.")
-@click.option("--fps", default=60, show_default=True, help="Output frame rate.")
 @click.option("-o", "--output", default=None, help="Output file or directory.")
-def cmd(input, fade, fade_in, fade_out, fps, output):
+def cmd(input, fade, fade_in, fade_out, output):
     """Add fade-in and/or fade-out to an FFV1 video."""
     if fade is not None:
         fade_in = fade_in if fade_in is not None else fade
@@ -25,7 +24,6 @@ def cmd(input, fade, fade_in, fade_out, fps, output):
                 Path(input),
                 fade_in=fade_in,
                 fade_out=fade_out,
-                fps=fps,
                 output=output,
                 on_progress=on_progress,
             )
