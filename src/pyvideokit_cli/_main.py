@@ -1,4 +1,5 @@
 import click
+from importlib.metadata import version
 
 from .apply_vhs_effect import cmd as cmd_apply
 from .concat_videos import cmd as cmd_concat
@@ -10,7 +11,7 @@ from .trim_video import cmd as cmd_trim
 
 
 @click.group()
-@click.version_option("0.1.0")
+@click.version_option(version("PyVideoKit-CLI"))
 def cli():
     """PyVideoKit CLI — FFmpeg-based video processing tools."""
 
