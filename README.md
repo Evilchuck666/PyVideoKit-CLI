@@ -30,9 +30,21 @@ Command-line tool for FFmpeg-based video processing: trim, concatenate, fade, ap
 
 ## 🔧 Installation
 
+### 🏗️ Arch Linux (AUR)
+
 ```bash
-pip install .
+yay -S python-pyvideokit-cli
 ```
+
+FFmpeg, FFprobe, SoX, and PyVideoKit-Libs are installed automatically as pacman dependencies.
+
+### 🐍 Other systems (pip)
+
+```bash
+pip install PyVideoKit-CLI
+```
+
+Make sure **FFmpeg**, **FFprobe**, and **SoX** are available in your `PATH`.
 
 This installs the `pvk` command group and seven standalone scripts (`trim-video`, `concat-videos`, etc.).
 
