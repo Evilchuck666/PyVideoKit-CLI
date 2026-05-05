@@ -1,19 +1,10 @@
-# Ignore EVERYTHING
 *
-
-# Except these files...
+!*/
+!*.py
 !.gitignore
-!.gitattributes
 !pyproject.toml
-!LICENSE
-!PKGBUILD
 !README.md
-
-# Allow the following directories and their contents
-!src/
-
-# Ignore all other files and directories
-src/*
-
-# Allow specific files in the src directory
-!src/*.py
+!LICENSE
+.venv/
+.vscode/
+build/
