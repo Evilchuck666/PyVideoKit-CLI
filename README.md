@@ -151,7 +151,7 @@ pvk convert-to-ffv1 INPUT [--fps FPS] [-o OUTPUT]
 | Argument / Option | Default | Description |
 |---|---|---|
 | `INPUT` | | Input video file |
-| `--fps` | `60` | Output frame rate |
+| `--fps` | source fps | Force an output frame rate (integer) |
 | `-o, --output` | | Output file or directory (optional) |
 
 ---
@@ -176,7 +176,7 @@ pvk extract-audio INPUT [-o OUTPUT]
 Add a fade-in and/or fade-out to an FFV1 video.
 
 ```
-pvk fade-video INPUT [--fade SECS] [--fade-in SECS] [--fade-out SECS] [--fps FPS] [-o OUTPUT]
+pvk fade-video INPUT [--fade SECS] [--fade-in SECS] [--fade-out SECS] [-o OUTPUT]
 ```
 
 | Option | Default | Description |
@@ -184,10 +184,9 @@ pvk fade-video INPUT [--fade SECS] [--fade-in SECS] [--fade-out SECS] [--fps FPS
 | `--fade` | | Shorthand: apply the same duration to both fade-in and fade-out |
 | `--fade-in` | | Fade-in duration in seconds |
 | `--fade-out` | | Fade-out duration in seconds |
-| `--fps` | `60` | Output frame rate |
 | `-o, --output` | | Output file or directory (optional) |
 
-`--fade` is a shorthand — if neither `--fade-in` nor `--fade-out` is provided, both use the value given to `--fade`.
+`--fade` is a shorthand: it sets whichever of `--fade-in` and `--fade-out` you did not give explicitly.
 
 ---
 
